@@ -28,6 +28,10 @@ public class DvdCine {
     private String resumen;
     private double duracion;
 
+    //CONTRUCTOR
+
+
+
 
 
 
