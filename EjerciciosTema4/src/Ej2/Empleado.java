@@ -61,15 +61,15 @@ public class Empleado {
     }
 
     //METODOS
-    public String getNombreCompleto() {
+    public String getNombreCompleto() { //Asi hemos creado para imprimir apellidos y nombre
         return this.apellidos + " " + this.nombre;
     }
 
-    public float getSalarioAnual() {
+    public float getSalarioAnual() {//Asi hemos creado para imprimir salario anual
         return this.salarioMensual *12;
     }
 
-    public void incrementaSalario(int porcentaje) {
+    public void incrementaSalario(int porcentaje) { // Asi hemos creado para incrementar salario
         this.salarioMensual = this.salarioMensual * (1 + ((float) porcentaje / 100));
     }
 

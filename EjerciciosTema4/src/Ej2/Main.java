@@ -6,6 +6,7 @@ public class Main {
         Empleado empleado1 = new Empleado( 6556, "Ruben", "Cald", 1500);
         Empleado empleado2 = new Empleado( 7777, "Juan", "Ruiz", 1600);
 
+
         //IMPRIMIMOS NOMBRES DE EMPLEADO 1 Y 2
         System.out.println(empleado1.getNombreCompleto());
         System.out.println(empleado2.getNombreCompleto());
