@@ -15,6 +15,7 @@ pasado como parámetro.
 f. Crea objetos y prueba estos métodos.
 
  */
+import java.util.ArrayList;
 
 public class DvdCine {
 
@@ -23,12 +24,14 @@ public class DvdCine {
     private String titulo;
     private String director;
     private String productora;
-    private String actores_principales;
-    private String genero;
+    private ArrayList<String> actores;
+    private Genero genero;
     private String resumen;
     private double duracion;
 
     //CONTRUCTOR
+
+
 
 
 

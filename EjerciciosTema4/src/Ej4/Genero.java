@@ -1,0 +1,5 @@
+package Ej4;
+
+public enum Genero {
+    DRAMA, TERROR, COMEDIA, INFANTIL, ACCION, ROMANCE, FICCION, THRILLER;
+}
