@@ -22,75 +22,74 @@ import java.util.Random;
 
 public class GestionProductos {
     //ATRIBUTOS
-    // ATRIBUTOS
-    private ArrayList<Producto> listaProductos; // Inicializamos el ArrayList
-    Random rand = new Random();
-    String[] tipos = {"Pintura", "Herramienta", "Recambio", "Cinta"};
+    private ArrayList<Producto> listaP = new ArrayList<>();
 
-    // Constructor: Llenar el ArrayList de productos con valores aleatorios
     public GestionProductos() {
-        listaProductos = new ArrayList<Producto>();  // Inicializamos el ArrayList
-        for (int i = 0; i < 100; i++) {
-            String codigo = "P" + (i + 1);
-            String nombre = "Producto " + (i + 1);
-            String tipo = tipos[rand.nextInt(tipos.length)];
-            double precioVenta = 10 + rand.nextDouble() * 100;  // Precio entre 10 y 110
-            double precioCompra = precioVenta - (rand.nextDouble() * 10); // Precio compra inferior al de venta
-            int unidadesDisponibles = rand.nextInt(100) + 1;  // Entre 1 y 100 unidades
 
-            listaProductos.add(new Producto(codigo, nombre, tipo, precioVenta, precioCompra, unidadesDisponibles));
-        }
+        generarProductos();
     }
 
-    // Métodos
-    // b. filtrarPorPrecioVenta. Pasar un precio y mostrar todos los productos con precio superior al pasado
-    public void filtrarPorPrecioVenta(double precio) {
-        System.out.println("Productos con precio de venta superior a " + precio + ":");
-        for (Producto p: listaProductos) {
-            if (p.getPrecioVenta() > precio) {
-                System.out.println(p);
+    private void generarProductos() {
+        //double randomValue = rangeMin + (rangeMax - rangeMin) * r.nextDouble();
+        Random rd = new Random();
+        int codigo;
+        String nombre;
+        String tipo;
+        double precio_venta;
+        double precio_compra;
+        int unidades;
+
+        for(int i=0;i<100; i++) {
+            codigo= i+1;
+            nombre = "producto"+ (i+1);
+            tipo = "tipo"+ (rd.nextInt(5-1)+1);
+            precio_compra = 5 +(100 - 5)*rd.nextDouble();
+            precio_venta= precio_compra +(100 - precio_compra)*rd.nextDouble();
+            unidades =rd.nextInt(20-1)+1;
+
+            listaP.add(new Producto(codigo, nombre, tipo, precio_venta, precio_compra, unidades));
+        }
+    }
+    //productos con precio de venta mayor a un precio dado
+    public void filtrarPrecioVenta(double precio) {
+
+        for(Producto p: listaP) {
+            if(p.getPrecioVenta() > precio) {
+                System.out.println(p.toString());
             }
         }
     }
-
-    // c. filtrarPorTipo. Pasar un tipo de producto y mostrar los que coinciden con él
+    //productos de un tipo dado
     public void filtrarPorTipo(String tipo) {
-        System.out.println("Productos de tipo " + tipo + ":");
-        for (Producto p : listaProductos) {
-            if (p.getTipo().equalsIgnoreCase(tipo)) {
-                System.out.println(p);
+
+        for(Producto p: listaP) {
+            if(p.getTipo().equals(tipo)) {
+                System.out.println(p.toString());
             }
         }
     }
-
-    // d. mostrarDiferencia. Mostrar nombre de producto, precio de compra, precio de venta y la diferencia
+    //mostrar la diferencia entre el precio de venta y el precio de compra
     public void mostrarDiferencia() {
-        for (Producto p : listaProductos) {
-            System.out.println("Nombre: " + p.getNombre() +
-                    ", Precio de compra: " + p.getPrecioCompra() +
-                    ", Precio de venta: " + p.getPrecioVenta() +
-                    ", Diferencia: " + (p.getPrecioVenta() - p.getPrecioCompra()));
+
+        for(Producto p: listaP) {
+            System.out.println(p.getNombre()+","+
+                    p.getPrecioCompra()+ ", diferencia: "+
+                    (p.getPrecioCompra()-p.getPrecioCompra()));
         }
     }
-
-    // e. mostrarProductoPosicion. Recibe como parámetro una posición y muestra el producto que está en esa posición
+    //mostrar el producto en una posicion dada
     public void mostrarProductoPosicion(int posicion) {
-        if (posicion >= 0 && posicion < listaProductos.size()) {
-            System.out.println("Producto en la posición " + posicion + ": " + listaProductos.get(posicion));
-        } else {
-            System.out.println("Posición inválida.");
-        }
+
+        System.out.println(listaP.get(posicion).toString());
+
     }
+    //cambiar el producto en una posicion dada por otro producto
+    public boolean cambiarPor(Producto p, int posicion) {
 
-    // f. cambiarPor. Este método recibe un producto y una posición y sustituirá en el array el
-    //  producto situado en la posición indicada por el producto pasado como parámetro
-    public boolean cambiarPor(Producto nuevoProducto, int posicion) {
-        if (posicion >= 0 && posicion < listaProductos.size()) {
-            listaProductos.set(posicion, nuevoProducto);  // Usamos set() para reemplazar el producto
-            return true;
-        }
+        System.out.println(listaP.size());
+        listaP.add(posicion, p);
+        System.out.println(listaP.size());
+
         return false;
-
-
     }
 }

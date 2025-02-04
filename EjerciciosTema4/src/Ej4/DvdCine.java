@@ -135,7 +135,7 @@ public class DvdCine {
      */
 
     @Override
-    public int hashCode() {
+    public int hashCode() {// NOS CREA UN CODIGO ESPECIFICO PARA TITULO Y DIRECTOR
         return Objects.hash(titulo, director);
     }
 

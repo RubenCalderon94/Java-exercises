@@ -9,7 +9,7 @@ public class Main {
         //CREAMOS UNA INSTANCIA, ENTONCES CREAREMOS UN OBJETO
         GestionProductos g = new GestionProductos();
 
-        g.filtrarPorPrecioVenta(50.0);
+        g.filtrarPrecioVenta(50.0);
         g.filtrarPorTipo("Herramienta");
         g.mostrarDiferencia();
         g.mostrarProductoPosicion(10);

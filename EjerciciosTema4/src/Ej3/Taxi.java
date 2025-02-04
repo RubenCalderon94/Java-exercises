@@ -10,18 +10,15 @@ que servirá para comprobar si dos taxis operan en el mismo distrito devolviendo
 o false. Este método recibirá un taxi como parámetro. Añade un nuevo método que
 devuelva un String con las coordenadas en conjunto. Crea dos objetos Taxi y prueba
 sus métodos.
-
-
- */
+*/
 
 public class Taxi {
-
 
     //ATRIBUTOS
 
     private String matricula;
-    private Distritos distritos;
-    private TipoMotor tipoMotor;
+    private Distritos distritos; //Tenemos un ENUM
+    private TipoMotor tipoMotor; //Tenemos un ENUM
     private double latitud;
     private double longitud;
     //private double[]coordenadas= new double[2];//ejemplo de como guardar mas de una variable
@@ -105,8 +102,14 @@ public class Taxi {
         return this.longitud + ", " + this.latitud;
     }
 
-
-
-
-
+    @Override
+    public String toString() {
+        return "Taxi{" +
+                "matricula='" + matricula + '\'' +
+                ", distritos=" + distritos +
+                ", tipoMotor=" + tipoMotor +
+                ", latitud=" + latitud +
+                ", longitud=" + longitud +
+                '}';
+    }
 }

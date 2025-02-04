@@ -3,7 +3,7 @@ package Ej13;
 public class Producto {
 
     //ATRIBUTOS
-    private String codigo;
+    private int codigo;
     private String nombre;
     private String tipo;
     private double precioVenta;
@@ -11,7 +11,7 @@ public class Producto {
     private int unidadesDisponibles;
 
     //CONSTRUCTOR
-    public Producto(String nombre, String codigo, String tipo, double precioVenta, double precioCompra, int unidadesDisponibles) {
+    public Producto( int codigo, String nombre, String tipo, double precioVenta, double precioCompra, int unidadesDisponibles) {
         this.nombre = nombre;
         this.codigo = codigo;
         this.tipo = tipo;
@@ -22,11 +22,11 @@ public class Producto {
 
     //GETTER Y SETTER
 
-    public String getCodigo() {
+    public int getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(String codigo) {
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 
