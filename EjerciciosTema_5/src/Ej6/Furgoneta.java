@@ -29,4 +29,12 @@ public class Furgoneta extends Vehiculos{
     public void setCarga(int carga) {
         this.carga = carga;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Furgoneta{" +
+                "capacidad=" + capacidad +
+                ", carga=" + carga +
+                '}';
+    }
 }

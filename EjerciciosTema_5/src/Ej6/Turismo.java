@@ -31,4 +31,13 @@ public class Turismo extends Vehiculos {
     public void setAutomatico(boolean automatico) {
         this.automatico = automatico;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() +  "Turismo{" +
+                "puertas=" + puertas +
+                ", automatico=" + automatico +
+                '}';
+    }
+
 }
