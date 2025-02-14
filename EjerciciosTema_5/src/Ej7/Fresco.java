@@ -37,12 +37,13 @@ public class Fresco extends Producto {
     public void mostrarInfo() {
         System.out.println("Producto Fresco:");
         System.out.println("ID: " + getIdproducto());
-        System.out.println("Descripción: " + getDescripcion());
         System.out.println("Fecha de Caducidad: " + getFechaCaducidad());
-        System.out.println("Número de Lote: "+getNumlote() );
-        System.out.println("Fecha de Envasado: " + getFechaEnvasado());
-        System.out.println("País de Origen: " + getPaisOrigen());
+        System.out.println("Descripción: " + getDescripcion());
+        System.out.println("Número de Lote: " + getNumlote());
+        System.out.println("Fecha de Envasado: " + fechaEnvasado);
+        System.out.println("País de Origen: " + paisOrigen);
 
 
     }
+
 }

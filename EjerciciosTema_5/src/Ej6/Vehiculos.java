@@ -11,7 +11,6 @@ public class Vehiculos {
 
     //CONSTRUCTOR
     public Vehiculos(String marca, String modelo, String matricula, Double tarifa, boolean disponible) {
-        super();
         this.marca = marca;
         this.modelo = modelo;
         this.matricula = matricula;

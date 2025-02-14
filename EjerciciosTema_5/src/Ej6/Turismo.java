@@ -34,7 +34,7 @@ public class Turismo extends Vehiculos {
 
     @Override
     public String toString() {
-        return super.toString() +  "Turismo{" +
+        return  "Turismo{" + super.toString() +
                 "puertas=" + puertas +
                 ", automatico=" + automatico +
                 '}';
