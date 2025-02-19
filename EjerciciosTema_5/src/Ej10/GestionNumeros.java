@@ -9,9 +9,9 @@ public class GestionNumeros implements InterfazNumeros {
 
     // Constructor que genera números aleatorios para el array
     public GestionNumeros() {
-        Random rand = new Random();
+        Random rd = new Random();
         for (int i = 0; i < numeros.length; i++) {
-            numeros[i] = rand.nextInt(100); // Números aleatorios entre 0 y 99
+            numeros[i] = rd.nextInt(100); // Números aleatorios entre 0 y 99
         }
     }
 
@@ -20,18 +20,21 @@ public class GestionNumeros implements InterfazNumeros {
 
     }
 
+
     @Override
     public void mostrarNumerosComoString() {
 
     }
 
     @Override
-    public void multiplicarPor(int numero) {
-
+    public void multiplicarPor(int multiplicador) {
+        for (int v: numeros) {
+            System.out.println( v= v * multiplicador);
+        }
     }
 
     @Override
-    public int contarValoresMayoresQue(int numero) {
+    public int contarValoresMayoresQue(int valor) {
         return 0;
     }
 
@@ -41,12 +44,12 @@ public class GestionNumeros implements InterfazNumeros {
     }
 
     @Override
-    public int compararCon(int[] otroArray) {
+    public int compararCon(int[] numeros) {
         return 0;
     }
 
     @Override
-    public int[] getArray(int[] otroArray) {
+    public int[] getArray(int[] num) {
         return new int[0];
     }
 }
