@@ -14,8 +14,6 @@ public class CuentaBancaria {
     }
 
     //GETTER Y SETTER
-
-
     public Cliente getCliente() {
         return cliente;
     }
