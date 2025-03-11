@@ -7,7 +7,7 @@ public class ColeccionCuentas {
     private ArrayList<CuentaBancaria> listaCuentas = new ArrayList<>();
 
     public ColeccionCuentas() {
-        Random rnd = new Random();
+        Random rnd = new Random();//GENERA AL AZAR ABAJO EN EL FOR NUMERO CLIENTE AL AZAR
         Cliente [] clientes = {new Cliente("1", "Sara Baras", "654456777"),
                 new Cliente("2", "Paloma Alba", "653336777"),
                 new Cliente("3", "Ferm�n Cacho", "37377377"),
