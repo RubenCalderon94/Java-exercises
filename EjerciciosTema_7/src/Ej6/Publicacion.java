@@ -1,4 +1,4 @@
-package Ej7;
+package Ej6;
 
 public class Publicacion {
 
